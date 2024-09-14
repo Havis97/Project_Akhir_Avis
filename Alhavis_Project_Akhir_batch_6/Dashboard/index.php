@@ -2,6 +2,15 @@
 <html lang="en">
 
 <head>
+        <?php
+    session_start();
+    if (!isset($_SESSION["issignin"]) || $_SESSION['issign'] !== true) {
+        echo "<script>
+        alert('Login Terlebih dahulu') 
+        window.location.href = './ultils/signin.php' 
+    </script>";
+    }
+    ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
