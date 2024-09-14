@@ -4,7 +4,7 @@
 <head>
         <?php
     session_start();
-    if (!isset($_SESSION["issignin"]) || $_SESSION['issign'] !== true) {
+    if (!isset($_SESSION["isLogin"]) || $_SESSION['isLogin'] !== true) {
         echo "<script>
         alert('Login Terlebih dahulu') 
         window.location.href = './ultils/signin.php' 
