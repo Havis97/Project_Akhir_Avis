@@ -8,7 +8,7 @@ $masuk = mysqli_query($koneksi, "SELECT username, Password FROM tb_admin");
 
 if (mysqli_affected_rows($koneksi) > 0) {
     session_start();
-    $_SESSION["issignin"] = true;
+    $_SESSION["isLogin"] = true;
     $_SESSION["username"] = $user;
     echo "<script>
         alert('Selamat Datang') 
